@@ -1,11 +1,13 @@
-<link rel="stylesheet" href="style.css">
-<!-- Bootstrap CSS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css">
-<!-- jQuery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<!-- Bootstrap JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script>
-<!-- Custom CSS -->
+<head>
+    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css">
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom CSS -->
+</head>
 
 <?php
 
@@ -27,7 +29,7 @@ $conn->close();
 function displayDoctorCard($row)
 {
     ?>
-    <div class="card shadow rounded m-3 mx-auto" style="width: 18rem;">
+    <div class="card shadow rounded m-3 " style="width: 18rem;">
         <div class="card-body mx-auto">
             <?php if ($row['doctor_id'] == $_GET['doctor_id']): ?>
                 <form class="form-inline m-2" id="form" action="" enctype="multipart/form-data" method="post">
@@ -39,19 +41,15 @@ function displayDoctorCard($row)
                         ?>
                         <label for="Picture">Profile Image:</label>
                         <!-- image  -->
-                        <img src="images/doctors_images/<?php echo $profile_image; ?>" class="img-fluid rounded-circle" alt="profile_image"
-                            title="<?php echo $profile_image; ?>">
+                        <img src="images/doctors_images/<?php echo $profile_image; ?>" class="img-fluid rounded-circle"
+                            alt="profile_image" title="<?php echo $profile_image; ?>">
 
                         <div class="round">
                             <input type="hidden" name="doctor_id" value="<?php echo $doctor_id; ?>">
                             <input type="hidden" name="name" value="<?php echo $name; ?>">
                             <br>
-                            
                             <input type="file" class="form-control-file" id="profile_image" name="profile_image"
-                            accept=".jpg, .jpeg, .png">
-
-                            
-
+                                accept=".jpg, .jpeg, .png">
                         </div>
                     </div>
                 </form>
@@ -70,8 +68,8 @@ function displayDoctorCard($row)
                 </form>
             <?php else: ?>
                 <div class="upload">
-                    <img src="images/doctors_images/<?php echo $row['profile_image']; ?>" class="img-fluid rounded-circle" alt="profile_image"
-                        title="<?php echo $row['profile_image']; ?>">
+                    <img src="images/doctors_images/<?php echo $row['profile_image']; ?>" class="img-fluid rounded-circle"
+                        alt="profile_image" title="<?php echo $row['profile_image']; ?>">
                 </div>
                 <h5 class="card-title">
                     <?php echo $row['name'] . ' ' . $row['surname']; ?>
@@ -92,14 +90,16 @@ function displayDoctorCard($row)
                 <p class="card-text">Phone Number:
                     <?php echo $row['phone_number']; ?>
                 </p>
-                <div class="btn-group" role="group" aria-label="Actions">
-                    <a class="btn btn-warning" href="doctors.php?doctor_id=<?php echo $row['doctor_id']; ?>"
+
+                <div class="btn-group" role="group">
+                    <a class="btn btn-custom-edit" href="doctors.php?doctor_id=<?php echo $row['doctor_id']; ?>"
                         role="button">Edit</a>
-                    <a class="btn btn-primary" href="doctors.php?doctor_id=<?php echo $row['doctor_id']; ?>"
+                    <a class="btn btn-custom-view" href="doctors_details.php?doctor_id=<?php echo $row['doctor_id']; ?>"
                         role="button">View</a>
-                    <a class="btn btn-danger" href="doctors_delete.php?doctor_id=<?php echo $row['doctor_id']; ?>"
+                    <a class="btn button-delete" href="doctors_delete.php?doctor_id=<?php echo $row['doctor_id']; ?>"
                         role="button">Delete</a>
                 </div>
+
                 <script>
                     window.addEventListener("beforeunload", function () {
                         localStorage.setItem("scrollPos", window.pageYOffset);
@@ -115,5 +115,6 @@ function displayDoctorCard($row)
                 </script>
             <?php endif; ?>
         </div>
+
     </div>
 <?php } ?>

@@ -85,7 +85,9 @@
                 </div>
 
                 <div class="container">
+                    <br>
                     <h2>Employee Details Form</h2>
+                    <br>
                     <form class="m-2" action="doctors_create.php" enctype="multipart/form-data" method="POST">
                         <div class="form-group">
                             <label for="name">Name:</label>

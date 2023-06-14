@@ -2,6 +2,9 @@ body,
 html {
     margin: 0;
     padding: 0;
+    background-color: rgb(153, 153, 153);
+    width: 100%;
+
 }
 
 .logo-section {
@@ -45,7 +48,7 @@ html {
 }
 
 .navigation {
-    background-color: #f1f1f1;
+    background-color: #ffffff;
     height: 100vh;
     margin-left: -15px;
     top: 0px;
@@ -67,13 +70,10 @@ html {
 .navigation .nav-link:hover {
     color: rgb(0, 0, 0);
     text-decoration: none;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(245, 245, 245);
 }
 
-.page {
-    background-color: rgb(153, 153, 153);
-    width: 100%;
-}
+
 
 .image-container {
     overflow: hidden;
@@ -153,13 +153,15 @@ html {
     width: 175px;
     position: relative;
 
-} 
+}
 
 .upload img {
     border-radius: 50%;
     border: 5px solid #e4e4e4;
     margin: 20px;
 }
+
+
 
 /* .upload .round {
     position: absolute;
@@ -188,3 +190,26 @@ input[type=file]::-webkit-file-upload-button {
     padding: 10px;
     margin: 150px;
 } */
+
+.btn-custom-edit {
+    background-color: orange;
+    color: white;
+}
+
+.btn-custom-view {
+    background-color: blue;
+    color: white;
+}
+
+.btn-custom-delete {
+    position: relative;
+    background-color: red;
+    color: white;
+    width: 100px;
+    height: 50px;
+}
+
+
+.form-group {
+    margin: 20px;
+}

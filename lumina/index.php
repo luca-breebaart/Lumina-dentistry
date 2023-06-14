@@ -72,27 +72,15 @@
 
                     <h1>Appointments</h1>
 
-                    <table>
-                        <tr>
-                            <th>Appointment ID</th>
-                            <th>Name</th>
-                            <th>Surname</th>
-                            <th>Date</th>
-                            <th>Time</th>
-                            <th>Doctor ID</th>
-                            <th>Receptionist ID</th>
-                            <th>Medical Aid Number</th>
-                            <th>Medical Fund</th>
-                            <th>Description</th>
-                        </tr>
-
-                        <?php
-
-                        include 'appointments_read.php';
 
 
-                        ?>
-                    </table>
+                    <?php
+
+                    include 'appointments_read.php';
+
+                    ?>
+
+
 
 
                 </div>
