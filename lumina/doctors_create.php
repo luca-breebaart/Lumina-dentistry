@@ -1,7 +1,7 @@
 <?php
 
 // Before everything, acknowledge this file.
-include 'doctors_db.php';
+include 'db.php';
 
 $doctor_id = $_POST['doctor_id'];
 $name = $_POST['name'];
