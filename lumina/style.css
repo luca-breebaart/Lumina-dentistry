@@ -1,0 +1,190 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+}
+
+.logo-center {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 50px;
+    top: 30px;
+}
+
+.logo-container {
+    margin-right: 10px;
+    /* Adjust the spacing between logo and text */
+    width: 70px;
+    height: 70px;
+    left: 50px;
+}
+
+.logo-name {
+    margin: 0;
+}
+
+.logo-subtitle {
+    margin: 0;
+}
+
+.logo {
+    position: relative;
+    width: 30px;
+    height: 70px;
+    /* display: flex;
+    text-align: center; */
+    padding: 50px;
+    background-color: blueviolet;
+}
+
+.navigation {
+    background-color: #f1f1f1;
+    height: 100vh;
+    margin-left: -15px;
+    top: 0px;
+    position: sticky;
+    /* Remove negative left margin */
+    /* margin-right: -15px; Remove negative right margin */
+}
+
+.nav-item {
+    padding-top: 20px;
+}
+
+.navigation .nav-link {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    padding: 20px;
+}
+
+.navigation .nav-link:hover {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    background-color: rgb(255, 255, 255);
+}
+
+.page {
+    background-color: rgb(153, 153, 153);
+    width: 100%;
+}
+
+.image-container {
+    overflow: hidden;
+    height: auto;
+    /* Set the height of the container to the viewport height */
+}
+
+.login_image1 {
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    pointer-events: none;
+    /* Disable pointer events on the images */
+}
+
+.login_image2 {
+    position: absolute;
+    left: 0px;
+    pointer-events: none;
+    /* Disable pointer events on the images */
+}
+
+.custom {
+    position: relative;
+    background-color: transparent;
+    border: none;
+    /* background: white; */
+    top: 200px;
+
+}
+
+.form-control {
+    border: 1px solid #1E1E1E;
+    filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.25));
+    border-radius: 10px;
+}
+
+.profile-card {
+    position: absolute;
+    top: 20px;
+    display: flex;
+    align-items: center;
+    right: 50px;
+}
+
+.profile-image {
+    position: relative;
+    flex-shrink: 0;
+    margin-right: 20px;
+    width: 70px;
+    height: 70px;
+    border-radius: 40px;
+    background: none;
+    /* border: 1px solid #dadada; */
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+}
+
+.profile-info {
+    position: relative;
+    text-align: left;
+    top: 7px;
+}
+
+.profile {
+    position: relative;
+    top: 0px;
+    height: 125px;
+    background: none;
+    flex-grow: 1;
+    border-bottom: 1px solid lightgrey;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+
+.upload {
+    width: 175px;
+    position: relative;
+
+} 
+
+.upload img {
+    border-radius: 50%;
+    border: 5px solid #e4e4e4;
+    margin: 20px;
+}
+
+/* .upload .round {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: #b1b1b1;
+    width: 35px;
+    height: 35px;
+    line-height: 33px;
+    text-align: center;
+    border-radius: 50%;
+    overflow: hidden;
+} 
+
+.upload .round input[type="file"] {
+    position: absolute;
+    transform: scale(2);
+    opacity: 0;
+}
+
+input[type=file]::-webkit-file-upload-button {
+    cursor: pointer;
+}
+
+.card-body {
+    padding: 10px;
+    margin: 150px;
+} */
