@@ -17,6 +17,8 @@
 
 </head>
 
+
+
 <body>
     <div class="container-fluid">
         <div class="row">
@@ -46,25 +48,31 @@
                         <h3 class="text-center">Login</h3>
                     </div>
                     <div class="custom-body">
-                        <form>
+                        <form action="login_read.php" method="post">
+
+                            <?php if (isset($_GET['error'])) { ?>
+                                <p class="error">
+                                    <?php echo $_GET['error']; ?>
+                                </p>
+                            <?php } ?>
+
                             <div class="mb-4">
                                 <label for="username" class="form-label">Username</label>
-                                <input type="text" class="form-control" id="username" placeholder="Enter your username">
+                                <input type="text" class="form-control" id="username" name="name"
+                                    placeholder="Enter your username">
                             </div>
                             <div class="mb-5">
                                 <label for="password" class="form-label">Password</label>
-                                <input type="password" class="form-control" id="password"
+                                <input type="text" class="form-control" id="password" name="password"
                                     placeholder="Enter your password">
                             </div>
                             <div class="text-center">
                                 <button type="submit" style="width: 50%;" class="btn btn-primary">Login</button>
-                            </div>
+                            </div> 
                         </form>
                     </div>
                 </div>
             </div>
-
-            
         </div>
     </div>
 </body>

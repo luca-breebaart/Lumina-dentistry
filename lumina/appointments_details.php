@@ -14,9 +14,9 @@ if (isset($_GET['id'])) {
         // Appointment found, display the details
         $appointment = $result->fetch_assoc();
         ?>
-        
+
         <title>Appointment Details</title>
-        
+
         <style>
             .card {
                 max-width: 400px;
@@ -48,6 +48,12 @@ if (isset($_GET['id'])) {
                         </td>
                     </tr>
                     <tr>
+                        <th>Patient ID</th>
+                        <td>
+                            <?php echo $appointment["patient_id"]; ?>
+                        </td>
+                    </tr>
+                    <tr>
                         <th>Date</th>
                         <td>
                             <?php echo $appointment["date"]; ?>
@@ -65,12 +71,34 @@ if (isset($_GET['id'])) {
                             <?php echo $appointment["doctor_id"]; ?>
                         </td>
                     </tr>
-                    <!-- Include other appointment details here -->
+                    <tr>
+                        <th>Receptionist ID</th>
+                        <td>
+                            <?php echo $appointment["receptionist_id"]; ?>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Medical Aid Number</th>
+                        <td>
+                            <?php echo $appointment["medicalaid_number"]; ?>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Medical Fund</th>
+                        <td>
+                            <?php echo $appointment["medicalfund"]; ?>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Description</th>
+                        <td>
+                            <?php echo $appointment["description"]; ?>
+                        </td>
+                    </tr>
                 </table>
-                <a href="index.php" class="btn btn-primary">Return</a>
+                <a href="appointments.php" class="btn btn-primary">Return</a>
             </div>
         </div>
-
 
         <?php
     } else {

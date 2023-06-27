@@ -58,7 +58,7 @@ html {
 }
 
 .nav-item {
-    padding-top: 20px;
+    margin-top: 20px;
 }
 
 .navigation .nav-link {
@@ -108,7 +108,7 @@ html {
 .form-control {
     border: 1px solid #1E1E1E;
     filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.25));
-    border-radius: 10px;
+    border-radius: 100px;
 }
 
 .profile-card {
@@ -125,11 +125,11 @@ html {
     margin-right: 20px;
     width: 70px;
     height: 70px;
-    border-radius: 40px;
+    border-radius: 100px;
     background: none;
     /* border: 1px solid #dadada; */
     box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
-}
+} 
 
 .profile-info {
     position: relative;
@@ -213,3 +213,4 @@ input[type=file]::-webkit-file-upload-button {
 .form-group {
     margin: 20px;
 }
+

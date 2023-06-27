@@ -15,40 +15,35 @@ include 'db.php';
 
 error_reporting(0);
 
-
-
-// Retrieve data from the doctors table
-$sql = "SELECT * FROM doctors";
+// Retrieve data from the receptionists table
+$sql = "SELECT * FROM receptionists";
 $result = $conn->query($sql);
 
 while ($row = $result->fetch_assoc()) {
     // Display data in cards
-    displayDoctorCard($row);
+    displayReceptionistCard($row);
 }
 
 $conn->close();
 
-function displayDoctorCard($row)
+function displayReceptionistCard($row)
 {
     ?>
     <div class="card shadow rounded m-3" style="width: 18rem;">
         <div class="card-body d-flex flex-column">
             <div class="upload">
-                <img src="images/doctors_images/<?php echo $row['profile_image']; ?>" class="img-fluid rounded-circle"
+                <img src="images/receptionist_images/<?php echo $row['profile_image']; ?>" class="img-fluid rounded-circle"
                     alt="profile_image" title="<?php echo $row['profile_image']; ?>">
             </div>
             <h5 class="card-title">
                 <?php echo $row['name'] . ' ' . $row['surname']; ?>
             </h5>
             <h6 class="card-subtitle mb-2 text-muted">ID number:
-                <?php echo $row['doctor_id']; ?>
+                <?php echo $row['receptionists_id']; ?>
             </h6>
             <br>
-            <p class="card-text">Specialisation:
-                <?php echo $row['specialisation']; ?>
-            </p>
-            <p class="card-text">Room Number:
-                <?php echo $row['room_number']; ?>
+            <p class="card-text">Position:
+                <?php echo $row['rank']; ?>
             </p>
             <p class="card-text">Email:
                 <?php echo $row['email']; ?>
@@ -58,13 +53,9 @@ function displayDoctorCard($row)
             </p>
 
             <div class="mt-auto">
-                <a class="btn btn-primary" href="doctors_details.php?doctor_id=<?php echo $row['doctor_id']; ?>"
+                <a class="btn btn-primary" href="receptionist_details.php?receptionists_id=<?php echo $row['receptionists_id']; ?>"
                     role="button">View</a>
             </div>
-            
-
         </div>
-
     </div>
-
 <?php } ?>

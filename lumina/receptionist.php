@@ -35,7 +35,7 @@
                     </div>
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.php">Dashboard</a>
+                            <a class="nav-link" href="appointments.php">Dashboard</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link"
@@ -47,7 +47,7 @@
                             href="receptionist.php">Receptionist</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Patients</a>
+                            <a class="nav-link" href="patient.php">Patients</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="login.php">Login</a>
@@ -71,7 +71,7 @@
                 </div>
 
                 <div>
-                    <h1> Reveptionists:</h1>
+                    <h1> Receptionists:</h1>
 
                     <div class="container">
                         <div class="row">

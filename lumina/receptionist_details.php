@@ -1,9 +1,9 @@
-<!-- Doctor Details Page -->
+<!-- Receptionist Details Page -->
 <!DOCTYPE html>
 <html>
 
 <head>
-    <title>Doctor Details</title>
+    <title>Receptionist Details</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <style>
         .card {
@@ -29,20 +29,20 @@
     <?php
     include 'db.php'; // Include your database connection file
     
-    // Retrieve the doctor ID from the query parameter
-    if (isset($_GET['doctor_id'])) {
-        $doctorId = $_GET['doctor_id'];
+    // Retrieve the receptionist ID from the query parameter
+    if (isset($_GET['receptionists_id'])) {
+        $receptionists_id = $_GET['receptionists_id'];
 
-        // Fetch the doctor details from the database using the doctor ID
-        $sql = "SELECT * FROM doctors WHERE doctor_id = $doctorId";
+        // Fetch the receptionist details from the database using the receptionist ID
+        $sql = "SELECT * FROM receptionists WHERE receptionists_id = $receptionists_id";
         $result = $conn->query($sql);
 
         if ($result->num_rows > 0) {
-            // Doctor found, display the details
-            $doctor = $result->fetch_assoc();
+            // Receptionist found, display the details
+            $receptionist = $result->fetch_assoc();
             ?>
             <div class="card">
-                <img src="images/doctors_images/<?php echo $doctor['profile_image']; ?>" class="details-image"
+                <img src="images/receptionist_images/<?php echo $receptionist['profile_image']; ?>" class="details-image"
                     alt="Profile Image">
                 <div class="card-body">
                     <?php if (isset($_GET['edit']) && $_GET['edit'] === 'true'): ?>
@@ -52,13 +52,13 @@
 
                             <div class="upload">
                                 <?php
-                                $doctor_id = $doctor["doctor_id"];
-                                $name = $doctor["name"];
-                                $profile_image = $doctor["profile_image"];
+                                $receptionists_id = $receptionist["receptionists_id"];
+                                $name = $receptionist["name"];
+                                $profile_image = $receptionist["profile_image"];
                                 ?>
 
                                 <div class="round">
-                                    <input type="hidden" name="doctor_id" value="<?php echo $doctor_id; ?>">
+                                    <input type="hidden" name="receptionists_id" value="<?php echo $receptionists_id; ?>">
                                     <input type="hidden" name="name" value="<?php echo $name; ?>">
 
                                     <input type="file" class="form-control-file" id="profile_image" name="profile_image"
@@ -68,47 +68,49 @@
 
                         </form>
 
-
-                        <form class="edit-form" action="doctors_update.php" method="POST" enctype="multipart/form-data">
-                            <h5 class="card-title">Doctor Details (Edit Mode)</h5>
+                        <form class="edit-form" action="receptionist_update.php" method="POST" enctype="multipart/form-data">
+                            <h5 class="card-title">Receptionist Details (Edit Mode)</h5>
                             <table class="table">
                                 <tr>
-                                    <th>Doctor ID</th>
+                                    <th>Receptionist ID</th>
                                     <td>
-                                        <?php echo $doctor["doctor_id"]; ?>
-                                        <input type="hidden" name="doctor_id" value="<?php echo $doctor["doctor_id"]; ?>">
+                                        <?php echo $receptionist["receptionists_id"]; ?>
+                                        <input type="hidden" name="receptionists_id"
+                                            value="<?php echo $receptionist["receptionists_id"]; ?>">
                                     </td>
                                 </tr>
                                 <tr>
                                     <th>Name</th>
                                     <td>
-                                        <input type="text" class="form-control" name="name" value="<?php echo $doctor["name"]; ?>">
+                                        <input type="text" class="form-control" name="name"
+                                            value="<?php echo $receptionist["name"]; ?>">
                                     </td>
                                 </tr>
                                 <tr>
                                     <th>Surname</th>
                                     <td>
                                         <input type="text" class="form-control" name="surname"
-                                            value="<?php echo $doctor["surname"]; ?>">
+                                            value="<?php echo $receptionist["surname"]; ?>">
                                     </td>
                                 </tr>
                                 <tr>
                                     <th>Age</th>
                                     <td>
-                                        <input type="number" class="form-control" name="age" value="<?php echo $doctor["age"]; ?>">
+                                        <input type="number" class="form-control" name="age"
+                                            value="<?php echo $receptionist["age"]; ?>">
                                     </td>
                                 </tr>
                                 <tr>
                                     <th>Gender</th>
                                     <td>
                                         <select class="form-control" name="gender">
-                                            <option value="male" <?php if ($doctor["gender"] === "male")
+                                            <option value="male" <?php if ($receptionist["gender"] === "male")
                                                 echo "selected"; ?>>Male
                                             </option>
-                                            <option value="female" <?php if ($doctor["gender"] === "female")
+                                            <option value="female" <?php if ($receptionist["gender"] === "female")
                                                 echo "selected"; ?>>
                                                 Female</option>
-                                            <option value="other" <?php if ($doctor["gender"] === "other")
+                                            <option value="other" <?php if ($receptionist["gender"] === "other")
                                                 echo "selected"; ?>>Other
                                             </option>
                                         </select>
@@ -118,125 +120,112 @@
                                     <th>Phone Number</th>
                                     <td>
                                         <input type="tel" class="form-control" name="phone_number"
-                                            value="<?php echo $doctor["phone_number"]; ?>">
+                                            value="<?php echo $receptionist["phone_number"]; ?>">
                                     </td>
                                 </tr>
                                 <tr>
                                     <th>Email</th>
                                     <td>
                                         <input type="email" class="form-control" name="email"
-                                            value="<?php echo $doctor["email"]; ?>">
+                                            value="<?php echo $receptionist["email"]; ?>">
                                     </td>
                                 </tr>
                                 <tr>
                                     <th>Password</th>
                                     <td>
                                         <input type="text" class="form-control" name="password"
-                                            value="<?php echo $doctor["password"]; ?>">
+                                            value="<?php echo $receptionist["password"]; ?>">
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th>Specialisation</th>
+                                    <th>Rank</th>
                                     <td>
-                                        <input type="text" class="form-control" name="specialisation"
-                                            value="<?php echo $doctor["specialisation"]; ?>">
+                                        <input type="text" class="form-control" name="rank"
+                                            value="<?php echo $receptionist["rank"]; ?>">
                                     </td>
                                 </tr>
-                                <tr>
-                                    <th>Room Number</th>
-                                    <td>
-                                        <input type="text" class="form-control" name="room_number"
-                                            value="<?php echo $doctor["room_number"]; ?>">
-                                    </td>
-                                </tr>
-
                             </table>
 
                             <div class="btn-group" role="group">
-                                <a href="doctors_details.php?doctor_id=<?php echo $doctorId; ?>"
+                                <a href="receptionist_details.php?receptionists_id=<?php echo $receptionists_id; ?>"
                                     class="btn btn-secondary">Cancel</a>
                                 <button type="submit" class="btn btn-success">Save</button>
                             </div>
                         </form>
                     <?php else: ?>
                         <!-- View mode -->
-                        <h5 class="card-title">Doctor Details</h5>
+                        <h5 class="card-title">Receptionist Details</h5>
                         <table class="table">
                             <tr>
-                                <th>Doctor ID</th>
+                                <th>Receptionist ID</th>
                                 <td>
-                                    <?php echo $doctor["doctor_id"]; ?>
+                                    <?php echo $receptionist["receptionists_id"]; ?>
                                 </td>
                             </tr>
                             <tr>
                                 <th>Name</th>
                                 <td>
-                                    <?php echo $doctor["name"]; ?>
+                                    <?php echo $receptionist["name"]; ?>
                                 </td>
                             </tr>
                             <tr>
                                 <th>Surname</th>
                                 <td>
-                                    <?php echo $doctor["surname"]; ?>
+                                    <?php echo $receptionist["surname"]; ?>
                                 </td>
                             </tr>
                             <tr>
                                 <th>Age</th>
                                 <td>
-                                    <?php echo $doctor["age"]; ?>
+                                    <?php echo $receptionist["age"]; ?>
                                 </td>
                             </tr>
                             <tr>
                                 <th>Gender</th>
                                 <td>
-                                    <?php echo $doctor["gender"]; ?>
+                                    <?php echo $receptionist["gender"]; ?>
                                 </td>
                             </tr>
                             <tr>
                                 <th>Phone Number</th>
                                 <td>
-                                    <?php echo $doctor["phone_number"]; ?>
+                                    <?php echo $receptionist["phone_number"]; ?>
                                 </td>
                             </tr>
                             <tr>
                                 <th>Email</th>
                                 <td>
-                                    <?php echo $doctor["email"]; ?>
+                                    <?php echo $receptionist["email"]; ?>
                                 </td>
                             </tr>
                             <tr>
                                 <th>Password</th>
                                 <td>
-                                    <?php echo $doctor["password"]; ?>
+                                    <?php echo $receptionist["password"]; ?>
                                 </td>
                             </tr>
                             <tr>
-                                <th>Specialisation</th>
+                                <th>Rank</th>
                                 <td>
-                                    <?php echo $doctor["specialisation"]; ?>
+                                    <?php echo $receptionist["rank"]; ?>
                                 </td>
                             </tr>
-                            <tr>
-                                <th>Room Number</th>
-                                <td>
-                                    <?php echo $doctor["room_number"]; ?>
-                                </td>
-                            </tr>
-
                         </table>
-                        <a href="doctors.php" class="btn btn-secondary">Return</a>
-                        <a href="doctors_details.php?doctor_id=<?php echo $doctorId; ?>&edit=true" class="btn btn-primary">Edit</a>
-                        <a class="btn button-delete" href="doctors_delete.php?doctor_id=<?php echo $doctorId; ?>"
+                        <a href="receptionist.php" class="btn btn-secondary">Return</a>
+                        <a href="receptionist_details.php?receptionists_id=<?php echo $receptionists_id; ?>&edit=true"
+                            class="btn btn-primary">Edit</a>
+                        <a class="btn button-delete"
+                            href="receptionist_delete.php?receptionists_id=<?php echo $receptionists_id; ?>"
                             role="button">Delete</a>
                     <?php endif; ?>
                 </div>
             </div>
             <?php
         } else {
-            echo "Doctor not found!";
+            echo "Receptionist not found!";
         }
     } else {
-        echo "Invalid doctor ID!";
+        echo "Invalid receptionist ID!";
     }
     ?>
 
@@ -250,7 +239,7 @@
 
         <?php
 
-        include 'doctors_profile.php';
+        include 'receptionist_profile.php';
 
         ?>
 

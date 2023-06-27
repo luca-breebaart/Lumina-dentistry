@@ -60,7 +60,9 @@ if (isset($_FILES["profile_image"]["name"]) && !empty($_FILES["profile_image"]["
 } else {
     // No profile image uploaded, handle it here
     // sql query:
-    $sql = "INSERT INTO doctors (doctor_id, name, surname, age, gender, phone_number, email, password, specialisation, room_number, profile_image) VALUES ('$doctor_id', '$name', '$surname', '$age', '$gender', '$phone_number', '$email', '$password', '$specialisation', '$room_number', 'noprofile.jpg')";
+    $no_profile = 'noprofile.jpg' ;
+
+    $sql = "INSERT INTO doctors (doctor_id, name, surname, age, gender, phone_number, email, password, specialisation, room_number, profile_image) VALUES ('$doctor_id', '$name', '$surname', '$age', '$gender', '$phone_number', '$email', '$password', '$specialisation', '$room_number', '$no_profile')";
 
     //$conn is from db.php. This runs the code with the authentication from the db.php file.
     $conn->query($sql);

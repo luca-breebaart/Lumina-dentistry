@@ -58,10 +58,6 @@ if (isset($_FILES["profile_image"]["name"])) {
         $stmt->close();
     }
 
-
-
-    
-
     echo '
         <script>
             document.location.href = "../lumina/doctors.php";

@@ -3,7 +3,7 @@
 include 'db.php';
 
 if (isset($_FILES["profile_image"]["name"])) {
-    $receptionist_id = $_POST["receptionist_id"];
+    $receptionists_id = $_POST["receptionists_id"];
     $name = $_POST["name"];
 
     // Check if a new image has been selected
@@ -21,7 +21,7 @@ if (isset($_FILES["profile_image"]["name"])) {
             echo "
                 <script>
                     alert('Invalid Image Extension');
-                    document.location.href = '../lumina/receptionists.php';
+                    document.location.href = '../lumina/receptionist.php';
                 </script>
             ";
             exit;
@@ -29,7 +29,7 @@ if (isset($_FILES["profile_image"]["name"])) {
             echo "
                 <script>
                     alert('Image Size Is Too Large');
-                    document.location.href = '../lumina/receptionists.php';
+                    document.location.href = '../lumina/receptionist.php';
                 </script>
             ";
             exit;
@@ -38,18 +38,18 @@ if (isset($_FILES["profile_image"]["name"])) {
         $newImageName = $name . " - " . date("Y.m.d") . " - " . date("h.i.sa"); // Generate new image name
         $newImageName .= '.' . $imageExtension;
 
-        move_uploaded_file($tmpName, 'images/receptionists_images/' . $newImageName);
+        move_uploaded_file($tmpName, 'images/receptionist_images/' . $newImageName);
 
         // Update the profile image in the database
-        $stmt = $conn->prepare("UPDATE receptionists SET profile_image = ? WHERE receptionist_id = ?");
-        $stmt->bind_param("si", $newImageName, $receptionist_id);
+        $stmt = $conn->prepare("UPDATE receptionists SET profile_image = ? WHERE receptionists_id = ?");
+        $stmt->bind_param("si", $newImageName, $receptionists_id);
         $stmt->execute();
         $stmt->close();
     }
 
     echo '
         <script>
-            document.location.href = "../lumina/receptionists.php";
+            document.location.href = "../lumina/receptionist.php";
         </script>
     ';
     exit;
