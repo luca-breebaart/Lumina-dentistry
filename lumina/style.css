@@ -129,7 +129,7 @@ html {
     background: none;
     /* border: 1px solid #dadada; */
     box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
-} 
+}
 
 .profile-info {
     position: relative;
@@ -163,33 +163,6 @@ html {
 
 
 
-/* .upload .round {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    background: #b1b1b1;
-    width: 35px;
-    height: 35px;
-    line-height: 33px;
-    text-align: center;
-    border-radius: 50%;
-    overflow: hidden;
-} 
-
-.upload .round input[type="file"] {
-    position: absolute;
-    transform: scale(2);
-    opacity: 0;
-}
-
-input[type=file]::-webkit-file-upload-button {
-    cursor: pointer;
-}
-
-.card-body {
-    padding: 10px;
-    margin: 150px;
-} */
 
 .btn-custom-edit {
     background-color: orange;
@@ -213,4 +186,3 @@ input[type=file]::-webkit-file-upload-button {
 .form-group {
     margin: 20px;
 }
-

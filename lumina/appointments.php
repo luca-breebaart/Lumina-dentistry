@@ -22,9 +22,10 @@
     <?php
     session_start();
 
-    if (isset($_SESSION['doctor_id']) && isset($_SESSION['name'])) {
+    if (isset($_SESSION['receptionists_id']) && isset($_SESSION['name'])) {
 
         ?>
+
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-2">
@@ -42,24 +43,21 @@
                         <ul class="nav flex-column">
                             <li class="nav-item">
                                 <a class="nav-link" style="background: #F7F7F7;box-shadow: inset -16px 0px 0px #5E56E5;"
-                                    href="#">Dashboard</a>
+                                    href="appointments.php">Dashboard</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="doctors.php">Doctors</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Receptionist</a>
+                                <a class="nav-link" href="receptionist.php">Receptionist</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Patients</a>
+                                <a class="nav-link" href="patient.php">Patients</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="login.php">Login</a>
+                                <a class="nav-link" style="position:relative; top: 400px; color:#5E56E5; "
+                                    href="logout.php">Log Out</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="logout.php">Logout</a>
-                            </li>
-
                         </ul>
                     </div>
                 </div>
@@ -77,7 +75,7 @@
                                     <?php echo $_SESSION['surname']; ?>
                                 </h3>
                                 <p class="receptionist-id">Receptionist ID:
-                                    <?php echo $_SESSION['doctor_id']; ?>
+                                    <?php echo $_SESSION['receptionists_id']; ?>
                                 </p>
                             </div>
                         </div>
@@ -86,9 +84,9 @@
 
 
                     <div>
-
+                        <br>
                         <h1>Appointments</h1>
-
+                        <br>
                         <?php
 
                         include 'appointments_read.php';

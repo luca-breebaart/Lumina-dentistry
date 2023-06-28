@@ -84,12 +84,6 @@ if (isset($_GET['id'])) {
                         </td>
                     </tr>
                     <tr>
-                        <th>Medical Fund</th>
-                        <td>
-                            <?php echo $appointment["medicalfund"]; ?>
-                        </td>
-                    </tr>
-                    <tr>
                         <th>Description</th>
                         <td>
                             <?php echo $appointment["description"]; ?>
@@ -97,6 +91,8 @@ if (isset($_GET['id'])) {
                     </tr>
                 </table>
                 <a href="appointments.php" class="btn btn-primary">Return</a>
+                <a class="btn button-delete" href="appointments_delete.php?appointment_id=<?php echo $appointmentId; ?>"
+                    role="button">Delete</a>
             </div>
         </div>
 

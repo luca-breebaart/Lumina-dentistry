@@ -105,13 +105,6 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th>Password</th>
-                                    <td>
-                                        <input type="text" class="form-control" name="password"
-                                            value="<?php echo $patient["password"]; ?>">
-                                    </td>
-                                </tr>
-                                <tr>
                                     <th>Medical Aid Number</th>
                                     <td>
                                         <input type="text" class="form-control" name="medicalaid_number"
@@ -121,7 +114,8 @@
                                 <tr>
                                     <th>Previous Appointments</th>
                                     <td>
-                                        <textarea class="form-control" name="previous_appointments" rows="5"><?php echo $patient["previous_appointments"]; ?></textarea>
+                                        <textarea class="form-control" name="previous_appointments"
+                                            rows="5"><?php echo $patient["previous_appointments"]; ?></textarea>
                                     </td>
                                 </tr>
                             </table>
@@ -179,12 +173,6 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th>Password</th>
-                                <td>
-                                    <?php echo $patient["password"]; ?>
-                                </td>
-                            </tr>
-                            <tr>
                                 <th>Medical Aid Number</th>
                                 <td>
                                     <?php echo $patient["medicalaid_number"]; ?>
@@ -198,7 +186,8 @@
                             </tr>
                         </table>
                         <a href="patient.php" class="btn btn-secondary">Return</a>
-                        <a href="patient_details.php?patients_id=<?php echo $patientId; ?>&edit=true" class="btn btn-primary">Edit</a>
+                        <a href="patient_details.php?patients_id=<?php echo $patientId; ?>&edit=true"
+                            class="btn btn-primary">Edit</a>
                         <a class="btn button-delete" href="patient_delete.php?patients_id=<?php echo $patientId; ?>"
                             role="button">Delete</a>
                     <?php endif; ?>

@@ -22,7 +22,7 @@ if (isset($_POST['name']) && isset($_POST['password'])) {
         header("Location: login.php?error=Password is required");
         exit();
     } else {
-        $sql = "SELECT * FROM doctors WHERE name='$name' AND password='$password'";
+        $sql = "SELECT * FROM receptionists WHERE name='$name' AND password='$password'";
 
         $result = mysqli_query($conn, $sql);
 
@@ -32,8 +32,8 @@ if (isset($_POST['name']) && isset($_POST['password'])) {
                 $_SESSION['name'] = $row['name'];
                 $_SESSION['surname'] = $row['surname'];
                 $_SESSION['password'] = $row['password'];
-                $_SESSION['profile_image'] = 'images/doctors_images/' . $row['profile_image'];
-                $_SESSION['doctor_id'] = $row['doctor_id'];
+                $_SESSION['profile_image'] = 'images/receptionist_images/' . $row['profile_image'];
+                $_SESSION['receptionists_id'] = $row['receptionists_id'];
                 header("Location: appointments.php");
                 exit();
             } else {
@@ -47,6 +47,6 @@ if (isset($_POST['name']) && isset($_POST['password'])) {
     }
 
 } else {
-    header("Location: login.php");
+    header("Location: appointments.php");
     exit();
 }

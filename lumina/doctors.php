@@ -23,7 +23,7 @@
     <?php
     session_start();
 
-    if (isset($_SESSION['doctor_id']) && isset($_SESSION['name'])) {
+    if (isset($_SESSION['receptionists_id']) && isset($_SESSION['name'])) {
 
         ?>
         <div class="container-fluid">
@@ -45,24 +45,23 @@
                                 <a class="nav-link" href="appointments.php">Dashboard</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" style="background: #F7F7F7;box-shadow: inset -16px 0px 0px #5E56E5;"
-                                    href="doctors.php">Doctors</a>
+                                <a class="nav-link"  style="background: #F7F7F7;box-shadow: inset -16px 0px 0px #5E56E5;"
+                                href="doctors.php">Doctors</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="receptionist.php">Receptionist</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Patients</a>
+                                <a class="nav-link" href="patient.php">Patients</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="login.php">Login</a>
+                                <a class="nav-link" style="position:relative; top: 400px; color:#5E56E5; "
+                                 href="logout.php">Log Out</a>
                             </li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-md-10">
-
-                    <!-- Rest of your website content goes here -->
 
                     <div class="profile">
                         <!-- Profile card -->
@@ -74,7 +73,7 @@
                                     <?php echo $_SESSION['surname']; ?>
                                 </h3>
                                 <p class="receptionist-id">Receptionist ID:
-                                    <?php echo $_SESSION['doctor_id']; ?>
+                                    <?php echo $_SESSION['receptionists_id']; ?>
                                 </p>
                             </div>
                         </div>
@@ -98,7 +97,7 @@
 
                     <div class="container">
                         <br>
-                        <h2>Employee Details Form</h2>
+                        <h2>Doctor Details Form</h2>
                         <br>
                         <form class="m-2" action="doctors_create.php" enctype="multipart/form-data" method="POST">
                             <div class="form-group">
@@ -156,7 +155,6 @@
                 </div>
             </div>
         </div>
-
 
 
 

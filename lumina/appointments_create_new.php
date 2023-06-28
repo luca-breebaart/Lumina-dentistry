@@ -20,7 +20,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $patientSurname = $rowPatient['surname'];
   $medicalAidNumber = $rowPatient['medicalaid_number'];
   
-
   // Insert the appointment into the database
   $sqlInsert = "INSERT INTO appointments (name, surname, patient_id, date, time, doctor_id, receptionist_id, medicalaid_number,  description) VALUES ('$patientName', '$patientSurname', $patientId, '$date', '$time', $doctorId, $receptionistId, '$medicalAidNumber',  '$description')";
 
