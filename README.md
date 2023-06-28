@@ -17,9 +17,9 @@ The Receptionist Management System is a web application that allows receptionist
 
 1. Clone the repository: `git clone <repository-url>`
 2. Navigate to the project directory: `cd receptionist-management-system`
-3. Import the database: Import the provided SQL file `database.sql` to your database server.
+3. Import the database: Import the provided SQL file `lumina.sql` to your database server.
 4. Configure database connection: Update the database credentials in the `db.php` file.
-5. Set up the web server: Configure your web server (e.g., Apache) to serve the project directory.
+5. Set up the web server: Configure your web server to serve the project directory.
 6. Access the application: Open the web browser and enter the URL for the application.
 
 ## Database:
