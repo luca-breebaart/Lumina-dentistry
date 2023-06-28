@@ -22,6 +22,10 @@ The Receptionist Management System is a web application that allows receptionist
 5. Set up the web server: Configure your web server (e.g., Apache) to serve the project directory.
 6. Access the application: Open the web browser and enter the URL for the application.
 
+## Database:
+
+
+
 ## Usage
 
 1. Login: On the login page, enter your receptionist name and password to log in to the system.
@@ -35,16 +39,8 @@ The Receptionist Management System is a web application that allows receptionist
 ## Technologies Used
 
 - HTML/CSS
-- JavaScript
 - PHP
 - MySQL
 
-## Credits
-
-This project was developed by [Your Name]. If you have any questions or suggestions, please contact [Your Email Address].
-
-## License
-
-[License Information]
 
 
