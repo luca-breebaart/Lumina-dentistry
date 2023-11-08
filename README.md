@@ -160,8 +160,6 @@ Run the following in the command-line in the terminal to clone the project:
 <br>
 ![3](mockups/3.jpg)
 <br>
-![4](mockups/4.jpg)
-<br>
 
 <!-- VIDEO DEMONSTRATION -->
 ### Video Demonstration
