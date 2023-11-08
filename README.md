@@ -6,13 +6,13 @@
 <p align="center">
 
   <a href="https://github.com/luca-breebaart/Lumina-dentistry">
-    <img src="src/images/Logo.png" alt="Logo" width="140" height="140">
+    <img src="images/Logo.png" alt="Logo" width="140" height="140">
   </a>
   
   <h3 align="center">Lumina Dentistry</h3>
 
   <p align="center">
-A Receptionist Management System for a dentistry.
+A Receptionist Management System for a Dentistry.
     <br>
    <br>
       <a href="https://github.com/luca-breebaart/llumina-dentistry"><strong>Explore the docs »</strong></a>
