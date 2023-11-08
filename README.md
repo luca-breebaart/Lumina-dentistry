@@ -121,12 +121,11 @@ Run the following in the command-line in the terminal to clone the project:
 
 ### Wireframes
 
-![wireframes1](DV200_wireframes/Index.png)
+![6](mockups/6.jpg)
 <br>
-![wireframes2](DV200_wireframes/Timeline.png)
+![5](mockups/5.jpg)
 <br>
-![wireframes3](DV200_wireframes/Compare_page.png)
-<br>
+
 
 ## Development Process
 
