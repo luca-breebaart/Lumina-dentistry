@@ -135,27 +135,11 @@ Run the following in the command-line in the terminal to clone the project:
 ### Implementation Process
 
 #### Highlights
-- Feature Integration: Successfully integrated the Car Specs API, enabling access to a comprehensive database of car details.
-
-- Data Visualization: Implemented Chart.js to create interactive and informative charts displaying car specifications.
-
-- User Interface Development: Designed an intuitive user interface providing a seamless experience for users navigating the website.
 
 #### Challenges
 
-- API Integration: Facing difficulties in setting up and managing the Car Specs API to get the right information effectively.
-
-- Data Display: Balancing between showing enough details and keeping it easy to understand for users.
-
-- Responsive Design: Making sure the website works well on different devices and screen sizes was a challenge.
-
 ### Future Implementation
 
-- Expanded Data Visualization: Adding more visual elements to present data for better comprehension. Such as adding images to the selected car.
-
-- Optimization: Streamlining code and processes for better performance and scalability.
-
-- Additional API Integration: Integrating additional APIs to expand the range of available data and features.
 
 <!-- MOCKUPS -->
 ## Final Outcome
