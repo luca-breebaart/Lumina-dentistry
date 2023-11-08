@@ -121,7 +121,7 @@ Run the following in the command-line in the terminal to clone the project:
 
 ### Wireframes
 
-![6](mockups/6.jpg)
+![4](mockups/4.jpg)
 <br>
 ![5](mockups/5.jpg)
 <br>
