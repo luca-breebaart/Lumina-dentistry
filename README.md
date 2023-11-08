@@ -86,7 +86,7 @@ Create a working folder in which you want this file saved. Then open the folder
 2. Clone Repository </br>
 Run the following in the command-line in the terminal to clone the project:
    ```sh
-   git clone https://github.com/luca-breebaart/DriveSphere.git
+   git clone https://github.com/luca-breebaart/Lumina-dentistry.git
    ```
 3. Navigate to the project directory: `cd Lumina`
 
