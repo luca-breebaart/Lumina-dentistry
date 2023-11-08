@@ -130,7 +130,7 @@ Run the following in the command-line in the terminal to clone the project:
 
 ## Development Process
 
-![ER Diagram](mockups/ER Diagram.jpg)
+![ERDiagram](mockups/ERDiagram.jpg)
 
 ### Implementation Process
 
