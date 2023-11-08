@@ -136,10 +136,19 @@ Run the following in the command-line in the terminal to clone the project:
 
 #### Highlights
 
+- Easy-to-Use Design: Made the system easy for everyone to understand, use and follow.
+- Many Functions: Created various useful features to help manage appointments, doctors, receptionists, and patient records.
+
 #### Challenges
+
+- Connecting XAMMP: Had difficulties connecting different parts of the system smoothly, especially linking appointments and patient details.
+- Debugging: Faced ongoing issues in checking and fixing problems to make the system run smoothly.
 
 ### Future Implementation
 
+- Design: Add a calendar on the landing page to manage appointments easier.
+- More Functions: Create various useful features to help manage appointments and patient records.
+- Security: Ensured that all the information in the system is safe and secure.
 
 <!-- MOCKUPS -->
 ## Final Outcome
