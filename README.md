@@ -6,7 +6,7 @@
 <p align="center">
 
   <a href="https://github.com/luca-breebaart/Lumina-dentistry">
-    <img src="Lumina/images/Logo.png" alt="Logo" width="140" height="140">
+    <img src="images/Logo.png" alt="Logo" width="140" height="140">
   </a>
   
   <h3 align="center">Lumina Dentistry</h3>
