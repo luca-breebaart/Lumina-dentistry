@@ -1,9 +1,9 @@
 <!-- HEADER SECTION -->
-<h5 align="center" style="padding:0;margin:0;">Luca Breebaart</h5>
-<h5 align="center" style="padding:0;margin:0;">Student Number 221345</h5>
-<h6 align="center">DV200 2023</h6>
+<h5 align="left" style="padding:0;margin:0;">Luca Breebaart</h5>
+<h5 align="left" style="padding:0;margin:0;">Student Number 221345</h5>
+<h6 align="left">DV200 2023</h6>
 </br>
-<p align="center">
+<p align="left">
 
   <a href="https://github.com/luca-breebaart/Lumina-dentistry">
     <img src="lumina/images/Logo.png" alt="Logo" width="140" height="140">
@@ -11,7 +11,7 @@
   
   <h3 align="center">Lumina Dentistry</h3>
 
-  <p align="center">
+  <p align="left">
 A Receptionist Management System for a Dentistry.
     <br>
    <br>
